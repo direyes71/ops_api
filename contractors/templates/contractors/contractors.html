@@ -1,0 +1,26 @@
+<html>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>Identificaci&oacute;n</th>
+					<th>Nombre</th>
+					<th>Direcci&oacute;n</th>
+					<th>Tel&eacute;fono</th>
+					<th>Opciones</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for contractor in contractors %}
+				<tr>
+					<td>{{ contractor.identification }}</td>
+					<td>{{ contractor.name }}</td>
+					<td>{{ contractor.address }}</td>
+					<td>{{ contractor.telephone }}</td>
+					<td><a href="{% url 'contractor_edit' contractor.id %}">Editar</a></td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+	</body>
+</html>

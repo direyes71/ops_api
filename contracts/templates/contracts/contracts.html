@@ -1,0 +1,28 @@
+<html>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>Fecha inicial</th>
+					<th>Fecha final</th>
+					<th>Descripci&oacute;n</th>
+					<th>Valor del contrato</th>
+					<th>Forma de pago</th>
+					<th>Contratista</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for contract in contracts %}
+				<tr>
+					<td>{{ contract.init_date }}</td>
+					<td>{{ contract.end_date }}</td>
+					<td>{{ contract.description }}</td>
+					<td>{{ contract.amount }}</td>
+					<td>{{ contract.payment_method }}</td>
+					<td>{{ contract.contractor }}</td>
+				</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+	</body>
+</html>

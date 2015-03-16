@@ -1,0 +1,13 @@
+<html>
+	<head></head>
+
+	<body>
+		<form action="" method="post">{% csrf_token %}
+			<table>
+				{{ form.as_table }}
+			</table>
+			<button>Guardar</button>
+		</form>
+		<a href="{% url 'contractor_list' %}">Ver lista de contratistas</a>
+	</body>
+</html>
